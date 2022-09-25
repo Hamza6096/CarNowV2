@@ -19,7 +19,7 @@ namespace CarNowV2.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        public IActionResult Index()
+        public IActionResult Role()
         {
             var roles = _roleManager.Roles.ToList();
             return View(roles);
